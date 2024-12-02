@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 // @ts-ignore
-import {changeSize, yellowSubmarine} from './funcions.ts';
+import {changeSize, yellowSubmarine,countWords} from './funcions.ts';
 
 
 @Component({
@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
   title = 'DOMiServerisAngularOscarMollinedoEchevarriaDAM1';
   urlTret: string = ""
   array: any = [{columna: 1, textP: "hola1"},{columna: 2, textP: "hola2"}]
+  nParaules: number = 0
 
   constructor() {
   }
@@ -29,6 +30,8 @@ export class AppComponent implements OnInit {
     yellowSubmarine("h1prin")
 
     this.array = changeSize(this.array)
+
+    this.nParaules = countWords("loreipsum")
 
   }
 }
