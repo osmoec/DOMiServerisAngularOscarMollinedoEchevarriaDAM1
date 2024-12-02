@@ -225,10 +225,19 @@
           <clipPath id="a"><path fill="#fff" d="M0 0h982v239H0z" /></clipPath>
         </defs>
       </svg>
-      <h1>Hello, {{ title }}</h1>
+      <h1 id="h1prin">Hello, {{ title }}</h1>
       <p>Congratulations! Your app is running. 🎉</p>
       <p id="paragraf"> paragraf prova</p>
       <p>url pagina web: {{urlTret}}</p>
+
+      <table>
+      @for (string of array; track string){
+        <tr>
+          <td>{{string.columna}}</td>
+          <td>{{string.textP}}</td>
+        </tr>
+      }
+      </table>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">

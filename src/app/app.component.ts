@@ -1,5 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+// @ts-ignore
+import {changeSize, yellowSubmarine} from './funcions.ts';
+
 
 @Component({
   selector: 'app-root',
@@ -12,6 +15,7 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent implements OnInit {
   title = 'DOMiServerisAngularOscarMollinedoEchevarriaDAM1';
   urlTret: string = ""
+  array: any = [{columna: 1, textP: "hola1"},{columna: 2, textP: "hola2"}]
 
   constructor() {
   }
@@ -21,6 +25,10 @@ export class AppComponent implements OnInit {
     contingut!.innerText = contingut!.innerText.toUpperCase()
 
     this.urlTret = document.URL
+
+    yellowSubmarine("h1prin")
+
+    this.array = changeSize(this.array)
 
   }
 }
