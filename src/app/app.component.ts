@@ -1,7 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-// @ts-ignore
-import {changeSize, yellowSubmarine,countWords} from './funcions.ts';
 
 
 @Component({
@@ -27,11 +25,6 @@ export class AppComponent implements OnInit {
 
     this.urlTret = document.URL
 
-    yellowSubmarine("h1prin")
-
-    this.array = changeSize(this.array)
-
-    this.nParaules = countWords("loreipsum")
 
   }
 }
