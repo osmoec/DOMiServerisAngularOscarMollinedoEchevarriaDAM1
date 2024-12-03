@@ -1,14 +1,16 @@
-export function yellowSubmarine(idH1: string){
-  var canvi = document.getElementById(idH1)!.style.backgroundColor="yellow";
+import {style} from "@angular/animations";
+
+export function yellowSubmarine(idH1){
+  var canvi = document.getElementById(idH1).style.backgroundColor="yellow";
 }
 
-export function changeSize(prova: any[]){
+export function changeSize(taula){
   let afegircella = {columna: 1, textP: "hola"}
   // @ts-ignore
-  return [...prova, afegircella];
+  return [...taula, afegircella];
 }
 
-export function countWords (id: String) {
+export function countWords (id) {
   var paraules = 0
   // @ts-ignore
   var text = document.getElementById(id)

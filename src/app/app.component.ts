@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+// @ts-ignore
+import {changeSize, yellowSubmarine,countWords} from './funcions.js';
 
 
 @Component({
@@ -25,6 +27,15 @@ export class AppComponent implements OnInit {
 
     this.urlTret = document.URL
 
+    yellowSubmarine("h1prin")
+
+    this.array = changeSize(this.array)
+
+    this.nParaules = countWords("loreipsum")
+
+    var imatge = document.getElementById("imatge")
+    // @ts-ignore
+    imatge.innerHTML = "<img src='https://static.wikia.nocookie.net/warhammer40k/images/3/3d/MalumCado.png'>"
 
   }
 }
