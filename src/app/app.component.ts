@@ -2,11 +2,13 @@ import {Component, OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 // @ts-ignore
 import {changeSize, yellowSubmarine,countWords} from './funcions.js';
+import {AppOUTComponent} from './app-out/app-out.component';
+import {ServeiauxService} from './serveiaux.service';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, AppOUTComponent],
   templateUrl: './app.component.html',
   standalone: true,
   styleUrl: './app.component.css'
@@ -17,13 +19,17 @@ export class AppComponent implements OnInit {
   urlTret: string = ""
   array: any = [{columna: 1, textP: "hola1"},{columna: 2, textP: "hola2"}]
   nParaules: number = 0
+  textDiv: string = ""
 
-  constructor() {
-  }
+  constructor(private servei: ServeiauxService) {}
 
   ngOnInit(): void {
     var contingut = document.getElementById('paragraf');
     contingut!.innerText = contingut!.innerText.toUpperCase()
+    // @ts-ignore
+    var prova = contingut.innerText
+
+    console.log(prova)
 
     this.urlTret = document.URL
 
@@ -36,6 +42,12 @@ export class AppComponent implements OnInit {
     var imatge = document.getElementById("imatge")
     // @ts-ignore
     imatge.innerHTML = "<img src='https://static.wikia.nocookie.net/warhammer40k/images/3/3d/MalumCado.png'>"
+
+    var contDir = document.getElementById("principal");
+    // @ts-ignore
+    this.textDiv = contDir.innerText
+
+    this.servei.GETtext(this.textDiv)
 
   }
 }

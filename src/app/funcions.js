@@ -1,7 +1,7 @@
 import {style} from "@angular/animations";
 
 export function yellowSubmarine(idH1){
-  var canvi = document.getElementById(idH1).style.backgroundColor="yellow";
+  document.getElementById(idH1).style.backgroundColor="yellow";
 }
 
 export function changeSize(taula){
