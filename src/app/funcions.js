@@ -5,9 +5,7 @@ export function yellowSubmarine(idH1){
 }
 
 export function changeSize(taula){
-  let afegircella = {columna: 1, textP: "hola"}
-  // @ts-ignore
-  return [...taula, afegircella];
+  document.getElementById(taula).style.width="500px"
 }
 
 export function countWords (id) {

@@ -17,7 +17,6 @@ import {ServeiauxService} from './serveiaux.service';
 export class AppComponent implements OnInit {
   title = 'DOMiServerisAngularOscarMollinedoEchevarriaDAM1';
   urlTret: string = ""
-  array: any = [{columna: 1, textP: "hola1"},{columna: 2, textP: "hola2"}]
   nParaules: number = 0
   textDiv: string = ""
   nouLibre: any
@@ -37,7 +36,7 @@ export class AppComponent implements OnInit {
 
     yellowSubmarine("h1prin")
 
-    this.array = changeSize(this.array)
+
 
     this.nParaules = countWords("loreipsum")
 
