@@ -20,8 +20,10 @@ export class AppComponent implements OnInit {
   array: any = [{columna: 1, textP: "hola1"},{columna: 2, textP: "hola2"}]
   nParaules: number = 0
   textDiv: string = ""
+  nouLibre: any
+  outputllibre: string = ""
 
-  constructor(private servei: ServeiauxService) {}
+  constructor(public servei: ServeiauxService) {}
 
   ngOnInit(): void {
     var contingut = document.getElementById('paragraf');
@@ -48,6 +50,10 @@ export class AppComponent implements OnInit {
     this.textDiv = contDir.innerText
 
     this.servei.GETtext(this.textDiv)
+
+    this.nouLibre = this.servei.crearLibre("LORT","Fantasia","ROL","Tenebrosa")
+
+    this.outputllibre = this.servei.mostrarLlibre(this.nouLibre)
 
   }
 }
