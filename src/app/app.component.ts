@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 // @ts-ignore
-import {changeSize, yellowSubmarine, countWords, mostrarvalorsdesplegable} from './funcions.js';
+import {changeSize, yellowSubmarine, countWords, mostrarvalorsdesplegable,primeralletrallistaM} from './funcions.js';
 import {AppOUTComponent} from './app-out/app-out.component';
 import {ServeiauxService} from './serveiaux.service';
 
@@ -37,6 +37,7 @@ export class AppComponent implements OnInit {
 
     yellowSubmarine("h1prin")
 
+    changeSize("taula")
 
     this.nParaules = countWords("loreipsum")
 
@@ -53,6 +54,8 @@ export class AppComponent implements OnInit {
     this.nouLibre = this.servei.crearLibre("LORT", "Fantasia", "ROL", "Tenebrosa")
 
     this.outputllibre = this.servei.mostrarLlibre(this.nouLibre)
+
+    primeralletrallistaM("llista")
 
   }
 
