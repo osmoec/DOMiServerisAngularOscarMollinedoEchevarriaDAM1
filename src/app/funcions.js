@@ -37,7 +37,8 @@ export function mostrarvalorsdesplegable(desplegableId, divId) {
   }
 
   divResultat.innerHTML = 'Valors disponibles: ' + valorsText;
-=======
+}
+
 
 export function primeralletrallistaM(classe){
   var llista = document.getElementsByClassName(classe);
