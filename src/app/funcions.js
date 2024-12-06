@@ -25,3 +25,15 @@ export function countWords (id) {
   }
   return paraules
 }
+export function mostrarvalorsdesplegable(desplegableId, divId) {
+  const desplegable = document.getElementById(desplegableId);
+  const divResultat = document.getElementById(divId);
+
+  let valorsText = '';
+
+  for (let i = 0; i < desplegable.options.length; i++) {
+    valorsText += desplegable.options[i].text + ' ';
+  }
+
+  divResultat.innerHTML = 'Valors disponibles: ' + valorsText;
+}
