@@ -26,10 +26,24 @@ export function countWords (id) {
   return paraules
 }
 
+export function mostrarvalorsdesplegable(desplegableId, divId) {
+  const desplegable = document.getElementById(desplegableId);
+  const divResultat = document.getElementById(divId);
+
+  let valorsText = '';
+
+  for (let i = 0; i < desplegable.options.length; i++) {
+    valorsText += desplegable.options[i].text + ' ';
+  }
+
+  divResultat.innerHTML = 'Valors disponibles: ' + valorsText;
+=======
+
 export function primeralletrallistaM(classe){
   var llista = document.getElementsByClassName(classe);
 
   for (var i = 0; i < llista.length; i++) {
     llista[i].innerHTML = llista[i].innerHTML.charAt(0).toUpperCase() + llista[i].innerHTML.substring(1)
   }
+
 }

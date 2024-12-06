@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 // @ts-ignore
-import {changeSize, yellowSubmarine,countWords,primeralletrallistaM} from './funcions.js';
+import {changeSize, yellowSubmarine, countWords, mostrarvalorsdesplegable,primeralletrallistaM} from './funcions.js';
 import {AppOUTComponent} from './app-out/app-out.component';
 import {ServeiauxService} from './serveiaux.service';
 
@@ -22,7 +22,8 @@ export class AppComponent implements OnInit {
   nouLibre: any
   outputllibre: string = ""
 
-  constructor(public servei: ServeiauxService) {}
+  constructor(public servei: ServeiauxService) {
+  }
 
   ngOnInit(): void {
     var contingut = document.getElementById('paragraf');
@@ -50,13 +51,15 @@ export class AppComponent implements OnInit {
 
     this.servei.GETtext(this.textDiv)
 
-    this.nouLibre = this.servei.crearLibre("LORT","Fantasia","ROL","Tenebrosa")
+    this.nouLibre = this.servei.crearLibre("LORT", "Fantasia", "ROL", "Tenebrosa")
 
     this.outputllibre = this.servei.mostrarLlibre(this.nouLibre)
 
     primeralletrallistaM("llista")
 
   }
+
+  protected readonly mostrarvalorsdesplegable = mostrarvalorsdesplegable;
 }
 
 

@@ -264,6 +264,15 @@
       <p id="imatge"></p>
       <div id="principal">App principal</div>
       <div>{{this.outputllibre}}</div>
+      <div>
+        <label for="dropdown">Selecciona una opció:</label>
+        <select id="dropdown" (change)="mostrarvalorsdesplegable('dropdown', 'result')">
+          <option value="opcio1">1: Desplegable</option>
+          <option value="opcio2">2: Desplegable</option>
+          <option value="opcio3">3: Desplegable</option>
+        </select>
+      </div>
+      <div id="result"></div>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
