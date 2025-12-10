@@ -26,17 +26,18 @@ export function countWords (id) {
   return paraules
 }
 
-export function mostrarvalorsdesplegable(desplegableId, divId) {
-  const desplegable = document.getElementById(desplegableId);
-  const divResultat = document.getElementById(divId);
 
-  let valorsText = '';
+export function mostrarValorsDesplegable(desplegableId, divId) {
+  let desplegable = document.getElementById(desplegableId);
+  let div = document.getElementById(divId);
 
-  for (let i = 0; i < desplegable.options.length; i++) {
-    valorsText += desplegable.options[i].text + ' ';
+  let text = "";
+
+  for(let i = 0; i < desplegable.options.length;i++){
+    text += desplegable.options[i].value + " "
   }
 
-  divResultat.innerHTML = 'Valors disponibles: ' + valorsText;
+  div.innerHTML = "Valors disponibles: " + text.trim()
 }
 
 
